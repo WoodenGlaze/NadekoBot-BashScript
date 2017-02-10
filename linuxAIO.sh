@@ -17,7 +17,7 @@ if [ $choice -eq 1 ] ; then
 
 	echo ""
 	echo "Downloading NadekoBot, please wait."
-	curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/master/nadeko_installer_latest.sh | sh
+	curl -L https://github.com/WoodenGlaze/NadekoBot-BashScript/raw/master/nadeko_installer_latest.sh | sh
 	echo ""
 	echo "NadekoBot Dev Build (Latest) downloaded."
 	bash linuxAIO.sh
@@ -25,7 +25,7 @@ else
 	if [ $choice -eq 2 ] ; then
 		echo ""
 		echo "Downloading NadekoBot, please wait."
-		curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/master/nadeko_installer.sh | sh
+		curl -L https://github.com/WoodenGlaze/NadekoBot-BashScript/raw/master/nadeko_installer.sh | sh
 		echo ""
 		echo "NadekoBot Stable Build downloaded."
 		bash linuxAIO.sh
@@ -33,7 +33,7 @@ else
 		if [ $choice -eq 3 ] ; then
 			echo ""
 			echo "Running Nadeko Normally, if you are running this to check Nadeko, use .die command on discord to stop Nadeko."
-			curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/master/nadeko_run.sh | sh
+			curl -L https://github.com/WoodenGlaze/NadekoBot-BashScript/raw/master/nadeko_run.sh | sh
 			echo ""
 			echo "Welcome back to NadekoBot."
 			bash linuxAIO.sh
@@ -42,7 +42,7 @@ else
 				echo ""
 				echo "Running Nadeko with Auto Restart you will have to close the session to stop the auto restart."
 				sleep 5s
-				wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/master/NadekoAutoRestartAndUpdate.sh && bash NadekoAutoRestartAndUpdate.sh
+				wget -N https://github.com/WoodenGlaze/NadekoBot-BashScript/raw/master/NadekoAutoRestartAndUpdate.sh && bash NadekoAutoRestartAndUpdate.sh
 				echo ""
 				echo "That did not work?"
 				bash linuxAIO.sh
@@ -50,7 +50,7 @@ else
 				if [ $choice -eq 5 ] ; then
 					echo ""
 					echo "Getting the Auto-Installer for Debian/Ubuntu"
-					wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/master/nadekoautoinstaller.sh && bash nadekoautoinstaller.sh
+					wget -N https://github.com/WoodenGlaze/NadekoBot-BashScript/raw/master/nadekoautoinstaller.sh && bash nadekoautoinstaller.sh
 					echo ""
 					echo "Welcome back..."
 					bash linuxAIO.sh
@@ -68,7 +68,7 @@ while true; do
     esac
 done
 clear
-cd NadekoBot/src/NadekoBot
+cd JARVIS/NadekoBot/src/NadekoBot
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:

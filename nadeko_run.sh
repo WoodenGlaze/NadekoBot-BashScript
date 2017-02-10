@@ -11,7 +11,7 @@ else
 	exit 1
 fi
 
-cd NadekoBot/src/NadekoBot
+cd JARVIS/NadekoBot/src/NadekoBot
 echo "Running NadekoBot. Please wait."
 dotnet run --configuration Release
 echo "Done"

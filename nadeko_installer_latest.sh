@@ -32,28 +32,28 @@ cd "$tempdir"
 
 echo ""
 echo "Downloading NadekoBot, please wait."
-git clone -b dev --recursive --depth 1 https://github.com/Kwoth/NadekoBot.git
+git clone -b dev --recursive --depth 1 https://github.com/WoodenGlaze/JARVIS.git
 echo ""
 echo "NadekoBot downloaded."
 
 echo ""
 echo "Downloading Nadeko dependencies"
-cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Core/
+cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Core/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Rest/
+cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Rest/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.WebSocket/
+cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.WebSocket/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Commands/
+cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Commands/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/NadekoBot/src/NadekoBot/
+cd $root/$tempdir/JARVIS/NadekoBot/src/NadekoBot/
 dotnet restore 1>/dev/null 2>&1
 echo ""
 echo "Download done"
 
 echo ""
 echo "Building NadekoBot"
-cd $root/$tempdir/NadekoBot/src/NadekoBot/
+cd $root/$tempdir/JARVIS/NadekoBot/src/NadekoBot/
 dotnet build --configuration Release 1>/dev/null 2>&1
 echo ""
 echo "Building done. Moving Nadeko"
@@ -62,11 +62,11 @@ cd "$root"
 
 if [ ! -d NadekoBot ]
 then
-    mv "$tempdir"/NadekoBot NadekoBot
+    mv "$tempdir"/JARVIS/NadekoBot NadekoBot
 else
     rm -rf NadekoBot_old 1>/dev/null 2>&1
     mv -fT NadekoBot NadekoBot_old 1>/dev/null 2>&1
-    mv $tempdir/NadekoBot NadekoBot
+    mv $tempdir/JARVIS/NadekoBot NadekoBot
     cp -f $root/NadekoBot_old/src/NadekoBot/credentials.json $root/NadekoBot/src/NadekoBot/credentials.json 1>/dev/null 2>&1
     echo ""
     echo "credentials.json copied to the new version"
