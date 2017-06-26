@@ -68,7 +68,7 @@ while true; do
     esac
 done
 clear
-cd ./NadekoBot/src/NadekoBot
+cd ./JARVIS/src/NadekoBot
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:
