@@ -68,7 +68,7 @@ while true; do
     esac
 done
 clear
-cd JARVIS/NadekoBot/src/NadekoBot
+cd ./NadekoBot/src/NadekoBot
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:
@@ -138,7 +138,7 @@ echo "{
   \"OsuApiKey\": \"$osu\",
   \"SoundCloudClientId\": \"$scid\",
   \"Db\": null,
-  \"TotalShards\": 1
+  \"TotalShards\": 10
 }" | cat - >> credentials.json
 echo Credentials setup completed.
 sleep 5

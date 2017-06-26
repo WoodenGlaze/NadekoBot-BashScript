@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo "NadekoBot 1.0"
-echo "Mirai was here."
+echo "JARVIS v2.1b"
 
 if hash dotnet 2>/dev/null
 then
@@ -12,7 +11,7 @@ else
 fi
 
 cd ./NadekoBot/src/NadekoBot
-echo "Running NadekoBot. Please wait."
+echo "Running JARVIS. Please wait."
 dotnet run --configuration Release
 echo "Done"
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ""
-echo "NadekoBot Installer started."
+echo "JARVIS Installer started."
 
 if hash git 1>/dev/null 2>&1
 then
@@ -31,49 +31,49 @@ mkdir "$tempdir"
 cd "$tempdir"
 
 echo ""
-echo "Downloading NadekoBot, please wait."
+echo "Downloading JARVIS, please wait."
 git clone -b master --recursive --depth 1 https://github.com/WoodenGlaze/JARVIS.git
 echo ""
-echo "NadekoBot downloaded."
+echo "JARVIS downloaded."
 
 echo ""
-echo "Downloading Nadeko dependencies"
-cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Core/
+echo "Downloading JARVIS dependencies"
+cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Core/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Rest/
+cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Rest/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.WebSocket/
+cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.WebSocket/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/JARVIS/NadekoBot/Discord.Net/src/Discord.Net.Commands/
+cd $root/$tempdir/NadekoBot/Discord.Net/src/Discord.Net.Commands/
 dotnet restore 1>/dev/null 2>&1
-cd $root/$tempdir/JARVIS/NadekoBot/src/NadekoBot/
+cd $root/$tempdir/NadekoBot/src/NadekoBot/
 dotnet restore 1>/dev/null 2>&1
 echo ""
 echo "Download done"
 
 echo ""
-echo "Building NadekoBot"
-cd $root/$tempdir/JARVIS/NadekoBot/src/NadekoBot/
+echo "Building JARVIS"
+cd $root/$tempdir/NadekoBot/src/NadekoBot/
 dotnet build --configuration Release 1>/dev/null 2>&1
 echo ""
-echo "Building done. Moving Nadeko"
+echo "Building done. Moving JARVIS"
 
 cd "$root"
 
 if [ ! -d NadekoBot ]
 then
-    mv "$tempdir"/JARVIS/NadekoBot NadekoBot
+    mv "$tempdir"/NadekoBot NadekoBot
 else
     rm -rf NadekoBot_old 1>/dev/null 2>&1
     mv -fT NadekoBot NadekoBot_old 1>/dev/null 2>&1
-    mv $tempdir/JARVIS/NadekoBot NadekoBot
-    cp -f $root/JARVIS/NadekoBot_old/src/NadekoBot/credentials.json $root/JARVIS/NadekoBot/src/NadekoBot/credentials.json 1>/dev/null 2>&1
+    mv $tempdir/NadekoBot NadekoBot
+    cp -f $root/NadekoBot_old/src/NadekoBot/credentials.json $root/NadekoBot/src/NadekoBot/credentials.json 1>/dev/null 2>&1
     echo ""
     echo "credentials.json copied to the new version"
-    cp -RT $root/JARVIS/NadekoBot_old/src/NadekoBot/bin/ $root/JARVIS/NadekoBot/src/NadekoBot/bin/ 1>/dev/null 2>&1
+    cp -RT $root/NadekoBot_old/src/NadekoBot/bin/ $root/NadekoBot/src/NadekoBot/bin/ 1>/dev/null 2>&1
     echo ""
     echo "Database copied to the new version"
-    cp -RT $root/JARVIS/NadekoBot_old/src/NadekoBot/data/ $root/JARVIS/NadekoBot/src/NadekoBot/data/ 1>/dev/null 2>&1
+    cp -RT $root/NadekoBot_old/src/NadekoBot/data/ $root/NadekoBot/src/NadekoBot/data/ 1>/dev/null 2>&1
     echo ""
     echo "Other data copied to the new version"
 fi

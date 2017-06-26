@@ -87,19 +87,19 @@ if [ "$OS" = "Linux" ]; then
 	exit 1
 fi
 
-echo -e "Welcome to NadekoBot Auto Prerequisites Installer. \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
+echo -e "Welcome to the JARVIS Auto Prerequisites Installer. \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
 
 while true; do
     read -p "[y/n]: " yn
     case $yn in
-        [Yy]* ) clear; echo Running NadekoBot Auto-Installer; sleep 2; break;;
+        [Yy]* ) clear; echo Running JARVIS Auto-Installer; sleep 2; break;;
         [Nn]* ) echo Quitting...; rm nadekoautoinstaller.sh && exit;;
         * ) echo "Couldn't get that please type [y] for Yes or [n] for No.";;
     esac
 done
 
 if [ "$OS" = "Ubuntu" ]; then
-echo "This installer will download all of the required packages for NadekoBot. It will use about 350MB of space. This might take awhile to download if you do not have a good internet connection."
+echo "This installer will download all of the required packages for JARVIS. It will use about 350MB of space. This might take awhile to download if you do not have a good internet connection."
 echo ""
 read -n 1 -s -p "Press any key to continue..."
 	if [ "$VER" = "14.04" ]; then

@@ -1,11 +1,11 @@
 #!/bin/sh
 echo ""
-echo "Running NadekoBot with auto restart normally! (without updating)"
+echo "Running JARVIS with auto restart normally! (without updating)"
 sleep 5s
 cd ./NadekoBot/src/NadekoBot
 while :; do dotnet run -c Release; sleep 5s; done
 echo ""
-echo "That didn't work? Please report in #NadekoLog Discord Server."
+echo "Something went wrong?!."
 sleep 3s
 bash linuxAIO.sh
 echo "Done"

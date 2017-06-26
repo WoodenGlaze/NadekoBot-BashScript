@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ""
-echo "Welcome to NadekoBot Auto Restart and Update!"
+echo "Welcome to the JARVIS Auto Restart and Update!"
 echo ""
 
 choice=5
@@ -8,7 +8,7 @@ choice=5
 	echo "2. Auto Restart and Update with Dev Build (latest)"
 	echo "3. Auto Restart and Update with Stable Build"
 	echo "4. Exit"
-	echo -n "Choose [1] to Run NadekoBot with auto restart on ".die" command without updating itself, [2 or 3] to Run with Auto Updating and Restarting after using ".die" command."
+	echo -n "Choose [1] to Run JARVIS with auto restart on ".die" command without updating itself, [2 or 3] to Run with Auto Updating and Restarting after using ".die" command."
 while [ $choice -eq 5 ]; do
 read choice
 if [ $choice -eq 1 ] ; then
@@ -33,7 +33,7 @@ else
 				echo "2. Auto Restart and Update with Dev Build (latest)"
 				echo "3. Auto Restart and Update with Stable Build"
 				echo "4. Exit"
-				echo -n "Choose [1] to Run NadekoBot with auto restart on ".die" command without updating itself, [2 or 3] to Run with Auto Updating and Restarting after using ".die" command."
+				echo -n "Choose [1] to Run JARVIS with auto restart on ".die" command without updating itself, [2 or 3] to Run with Auto Updating and Restarting after using ".die" command."
 				choice=5
 			fi
 		fi
