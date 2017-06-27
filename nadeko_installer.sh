@@ -32,7 +32,7 @@ cd "$tempdir"
 
 echo ""
 echo "Downloading JARVIS, please wait."
-git clone -b master --recursive --depth 1 https://github.com/WoodenGlaze/JARVIS.git
+git clone -b master --recursive --depth 1 https://github.com/WoodenGlaze/NadekoBot.git
 echo ""
 echo "JARVIS downloaded."
 
